@@ -1,5 +1,5 @@
 import 'package:adv_basics/data/questions.dart';
-import 'package:adv_basics/questions_sumary.dart';
+import 'package:adv_basics/questions_summary.dart';
 import 'package:flutter/material.dart';
 
 class ResultsScreen extends StatelessWidget {
@@ -8,10 +8,10 @@ class ResultsScreen extends StatelessWidget {
   final List<String> chosenAnswers;
 
   List<Map<String, Object>> getSummaryData() {
-    final List<Map<String, Object>> sumary = [];
+    final List<Map<String, Object>> summary = [];
 
     for (var i = 0; i < chosenAnswers.length; i++) {
-      sumary.add(
+      summary.add(
         {
           'question_index': i,
           'question': questions[i],
@@ -20,7 +20,7 @@ class ResultsScreen extends StatelessWidget {
         },
       );
     }
-    return sumary;
+    return summary;
   }
 
   @override
@@ -36,7 +36,7 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            QuestionsSumary(getSummaryData()),
+            QuestionsSummary(getSummaryData()),
             const SizedBox(
               height: 30,
             ),

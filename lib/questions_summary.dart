@@ -1,13 +1,13 @@
 import 'package:adv_basics/data/questions.dart';
 import 'package:flutter/material.dart';
 
-class QuestionsSumary extends StatelessWidget {
-  const QuestionsSumary({super.key, required this.sumaryData});
-  final List<Map<String, Object>> sumaryData;
+class QuestionsSummary extends StatelessWidget {
+  const QuestionsSummary(this.summaryData, {super.key});
+  final List<Map<String, Object>> summaryData;
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: sumaryData.map((data) {
+      children: summaryData.map((data) {
         return Row(children: [
           Text(((data['question_index'] as int) + 1).toString()),
           Column(children: [
